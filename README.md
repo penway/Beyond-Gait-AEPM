@@ -3,9 +3,8 @@
 **Beyond Gait: Learning knee angle for seamless prosthesis control in multiple scenarios**  
 Pengwei Wang, Yilong Chen, Wan Su, Jie Wang, Teng Ma, Haoyong Yu
 
-Figure below: overview of the proposed AEPM framework.
-![AEPM](./figs/overview.png)
-![AEPM](./figs/results.png)
+![overview](./figs/overview.png)
+![results](./figs/results.jpg)
 
 ## Getting Started
 ### Environment
