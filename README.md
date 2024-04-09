@@ -8,7 +8,8 @@ Pengwei Wang, Yilong Chen, Wan Su, Jie Wang, Teng Ma, Haoyong Yu
 ```shell
 conda create -n aepm python=3.8
 conda activate aepm
-pip install 
+pip install torch==2.0.0 torchvision==0.15.1 torchaudio==2.0.1
+pip install einops timm matplotlib tensorboard
 ```
 
 ### Data Preparation
