@@ -75,9 +75,9 @@ def train():
     optimizer = torch.optim.AdamW(model.parameters(), lr=config.learning_rate)
     criterion = nn.MSELoss()
 
-    dataset = H36M_Dataset("/root/autodl-tmp/datasets/h36m", "train")
+    dataset = H36M_Dataset(config.dataset_path, "train")
     dataloader = torch.utils.data.DataLoader(dataset, batch_size=config.batch_size, shuffle=True, num_workers=4, pin_memory=True)
-    testset = H36M_Dataset("/root/autodl-tmp/datasets/h36m", "test")
+    testset = H36M_Dataset(config.dataset_path, "test")
     testloader = torch.utils.data.DataLoader(testset, batch_size=config.test_batch_size, shuffle=True, num_workers=4, pin_memory=True)
     
     # create result folder and log file

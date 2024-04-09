@@ -5,10 +5,29 @@ Pengwei Wang, Yilong Chen, Wan Su, Jie Wang, Teng Ma, Haoyong Yu
 
 ## Getting Started
 ### Environment
+```shell
+conda create -n aepm python=3.8
+conda activate aepm
+pip install 
+```
 
 ### Data Preparation
+Structure Human3.6M dataset as follows, only txt files are needed. Basic setting can be found in `config.py`.
+```
+- h36m
+    - S1
+        - discussion_1.txt
+        - discussion_2.txt
+        - walking_1.txt
+        - ...
+    - S5
+    - ...
+```
 
 ### Training
+```shell
+python train.py
+```
 
 ## Acknowledgement
 The MixSTE code is referenced from [MixSTE](https://github.com/JinluZhang1126/MixSTE) and [D3DP](https://github.com/paTRICK-swk/D3DP).

@@ -13,3 +13,5 @@ epochs = 500
 frame_num = 25
 
 shift_epoch = 30
+
+dataset_path = "/root/autodl-tmp/datasets/h36m"
