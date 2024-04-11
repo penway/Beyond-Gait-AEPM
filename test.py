@@ -20,7 +20,7 @@ used_joint_indexes = np.array([0,1,2,6,7,11,12,13,14,15,16,17,18,24,25,26]).asty
 
 @torch.no_grad()
 def test(model_path, test_set_path, output_path, figure_path):
-    model.load_state_dict(torch.load(f"{model_path}"))
+    model.load_state_dict(torch.load(model_path))
 
     total_mpjpes = []
     total_mins = []
