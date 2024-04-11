@@ -1,3 +1,6 @@
+# we use this script to generated the knee angle estimated to npy files
+
+import os
 import torch
 import numpy as np
 
@@ -8,7 +11,7 @@ from utils import sixteen_to_xyz
 model = MultiModalGuesser(num_frame=25, num_joints=16, in_chans=3, embed_dim_ratio=32, depth=4,
                  num_heads=8, mlp_ratio=2., qkv_bias=True, qk_scale=None,
                  drop_rate=0., attn_drop_rate=0., drop_path_rate=0.2,  norm_layer=None, is_train=True).cuda().eval()
-model.load_state_dict(torch.load("/root/autodl-tmp/PTMM_clean/logs/20240321-005719/pth/epoch_123.pth"))
+
 mse = torch.nn.MSELoss()
 
 data_names = ['directions', 'discussion', 'eating', 'greeting', 'phoning', 'posing', 'purchases', 'sitting', 'sittingdown', 'smoking', 'takingphoto', 'waiting', 'walking', 'walkingdog', 'walkingtogether']
@@ -16,12 +19,14 @@ data_names = ['directions', 'discussion', 'eating', 'greeting', 'phoning', 'posi
 used_joint_indexes = np.array([0,1,2,6,7,11,12,13,14,15,16,17,18,24,25,26]).astype(np.int64)
 
 @torch.no_grad()
-def test():
+def test(model_path, test_set_path, output_path, figure_path):
+    model.load_state_dict(torch.load(f"{model_path}"))
+
     total_mpjpes = []
     total_mins = []
     for data_name in data_names:
         for num in ['_1', '_2']:
-            target_data_path = '/root/autodl-tmp/datasets/h36m/S5/' + data_name + num + '.txt'
+            target_data_path = os.path.join(test_set_path, data_name + num + '.txt')
             target_data = torch.from_numpy(np.loadtxt(target_data_path, delimiter=',')).float().to("cuda")
 
             mpjpes = []
@@ -89,7 +94,7 @@ def test():
 
             # save the output data
             output_data = angles_x_hat.cpu().numpy()
-            np.save(f"/root/autodl-tmp/PTMM_clean/output_data_clean/{data_name}{num}.npy", output_data)
+            np.save(os.path.join(output_path, "{data_name}{num}.npy"), output_data)
 
             import matplotlib.pyplot as plt
             plt.figure()
@@ -100,7 +105,7 @@ def test():
             # set ratio of x and y axis to 1:4
             plt.gca().set_aspect('auto', adjustable='box')
             plt.plot(angles_gt[:1000, 0].cpu().numpy(), label="gt", color='green')
-            plt.savefig(f"/root/autodl-tmp/PTMM_clean/logs/pics/{data_name}{num}.png")
+            plt.savefig(os.path.join(figure_path, f"{data_name}{num}.png"))
 
             # print(f"{data_name}{num} mpjpe: {sum(mpjpes)/len(mpjpes)}")
             print(f"{sum(mpjpes)/len(mpjpes)},{sum(mpjpes_min)/len(mpjpes_min)}")
@@ -112,4 +117,8 @@ def test():
 
 
 if __name__ == "__main__":
-    test()
+    model_path = "/home/aepm/logs/20240321-005719/pth/epoch_123.pth"
+    test_set_path = "/home/aepm/datasets/h36m/S5/"
+    output_path = "/home/aepm/output_data"
+    figure_path = "/home/aepm/logs/pics/"
+    test(model_path, test_set_path, output_path, figure_path)

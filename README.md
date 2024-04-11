@@ -2,6 +2,7 @@
 
 **Beyond Gait: Learning knee angle for seamless prosthesis control in multiple scenarios**  
 Pengwei Wang, Yilong Chen, Wan Su, Jie Wang, Teng Ma, Haoyong Yu
+[https://arxiv.org/abs/2404.06772](https://arxiv.org/abs/2404.06772)
 
 ![overview](./figs/overview.png)
 ![results](./figs/results.jpg)
@@ -18,7 +19,7 @@ pip install einops timm matplotlib tensorboard
 ```
 
 ### Data Preparation
-Structure Human3.6M dataset as follows, only txt files are needed. Basic setting can be found in `config.py`.
+Structure Human3.6M dataset as follows, only txt files are needed. The `base_path` and `dataset_path` can be set in `config.py`.
 ```
 - h36m
     - S1
