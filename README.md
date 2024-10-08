@@ -1,13 +1,13 @@
 # Beyond Gait: AEPM
 
-**Beyond Gait: Learning knee angle for seamless prosthesis control in multiple scenarios**  
+**Beyond Gait: Seamless Knee Angle Prediction for Lower Limb Prosthesis in Multiple Scenarios**  
 Pengwei Wang, Yilong Chen, Wan Su, Jie Wang, Teng Ma, Haoyong Yu  
 [https://arxiv.org/abs/2404.06772](https://arxiv.org/abs/2404.06772)
 
 ![overview](./figs/overview.png)
 ![results](./figs/results.jpg)
 
-Abstract: *Deep learning models have become a powerful tool in knee angle estimation for lower limb prostheses, owing to their adaptability across various gait phases and locomotion modes. Current methods utilize Multi-Layer Perceptrons (MLP), Long-Short Term Memory Networks (LSTM), and Convolutional Neural Networks (CNN), predominantly analyzing motion information from the thigh. Contrary to these approaches, our study introduces a holistic perspective by integrating whole-body movements as inputs. We propose a transformer-based probabilistic framework, termed the Angle Estimation Probabilistic Model (AEPM), that offers precise angle estimations across extensive scenarios beyond walking. AEPM achieves an overall RMSE of 6.70 degrees, with an RMSE of 3.45 degrees in walking scenarios. Compared to the state of the art, AEPM has improved the prediction accuracy for walking by 11.31%. Our method can achieve seamless adaptation between different locomotion modes. Also, this model can be utilized to analyze the synergy between the knee and other joints. We reveal that the whole body movement has valuable information for knee movement, which can provide insights into designing sensors for prostheses.*
+Abstract: *Knee angle estimation plays a crucial role in the development of lower limb assistive devices, particularly prostheses. Current research in this area primarily focuses on stable gait movements, which limits applicability to real-world scenarios where human motion is far more complex. In this paper, we focus on estimating the knee angle in a broader range of activities beyond simple gait movements. By leveraging the synergy of whole-body dynamics, we propose a transformer-based probabilistic framework, the Angle Estimation Probabilistic Model (AEPM), which offers precise knee angle estimation across various daily movements. AEPM achieves an overall RMSE of 6.83 degrees, with an RMSE of 2.93 degrees in walking scenarios, outperforming the current state of the art with a 24.68\% improvement in walking prediction accuracy.} Additionally, our method can achieve seamless adaptation between different locomotion modes. Also, this model can be utilized to analyze the synergy between the knee and other joints. We reveal that the whole body movement has valuable information for knee movement, which can provide insights into designing sensors for prostheses.*
 
 ## Getting Started
 ### Environment
