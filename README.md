@@ -39,3 +39,17 @@ python train.py
 
 ## Acknowledgement
 The MixSTE code is referenced from [MixSTE](https://github.com/JinluZhang1126/MixSTE) and [D3DP](https://github.com/paTRICK-swk/D3DP).
+
+## Cite
+```
+@ARTICLE{10767306,
+  author={Wang, Pengwei and Chen, Yilong and Su, Wan and Wang, Jie and Ma, Teng and Yu, Haoyong},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={Beyond Gait: Seamless Knee Angle Prediction for Lower Limb Prosthesis in Multiple Scenarios}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-8},
+  keywords={Knee;Transformers;Estimation;Decoding;Sensors;Probabilistic logic;Prosthetics;Feature extraction;Accuracy;Legged locomotion;Prosthetics and Exoskeletons;Deep Learning Methods;Human and Humanoid Motion Analysis and Synthesis;Knee Angle Estimation},
+  doi={10.1109/LRA.2024.3506220}}
+```
