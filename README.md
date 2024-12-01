@@ -1,8 +1,9 @@
 # Beyond Gait: AEPM
 
 **Beyond Gait: Seamless Knee Angle Prediction for Lower Limb Prosthesis in Multiple Scenarios**  
-Pengwei Wang, Yilong Chen, Wan Su, Jie Wang, Teng Ma, Haoyong Yu  
-[https://arxiv.org/abs/2404.06772](https://arxiv.org/abs/2404.06772)
+Pengwei Wang, Yilong Chen, Wan Su, Jie Wang, Teng Ma, Haoyong Yu
+
+Published in: IEEE Robotics and Automation Letters (DOI: [10.1109/LRA.2024.3506220](https://doi.org/10.1109/LRA.2024.3506220))
 
 ![overview](./figs/overview.png)
 ![results](./figs/result.jpg)
