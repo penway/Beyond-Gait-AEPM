@@ -46,10 +46,10 @@ The MixSTE code is referenced from [MixSTE](https://github.com/JinluZhang1126/Mi
   author={Wang, Pengwei and Chen, Yilong and Su, Wan and Wang, Jie and Ma, Teng and Yu, Haoyong},
   journal={IEEE Robotics and Automation Letters}, 
   title={Beyond Gait: Seamless Knee Angle Prediction for Lower Limb Prosthesis in Multiple Scenarios}, 
-  year={2024},
-  volume={},
-  number={},
-  pages={1-8},
-  keywords={Knee;Transformers;Estimation;Decoding;Sensors;Probabilistic logic;Prosthetics;Feature extraction;Accuracy;Legged locomotion;Prosthetics and Exoskeletons;Deep Learning Methods;Human and Humanoid Motion Analysis and Synthesis;Knee Angle Estimation},
+  year={2025},
+  volume={10},
+  number={1},
+  pages={406-413},
+  keywords={Knee;Transformers;Estimation;Decoding;Sensors;Probabilistic logic;Prosthetics;Feature extraction;Accuracy;Legged locomotion;Deep learning methods;human and humanoid motion analysis and synthesis;knee angle estimation;prosthetics and exoskeletons},
   doi={10.1109/LRA.2024.3506220}}
 ```
